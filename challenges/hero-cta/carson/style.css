@@ -1,0 +1,58 @@
+#hero {
+  background: url(iphoneHero.png) no-repeat center center fixed;
+  background-size: 1470px 580px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0px;
+}
+* {
+  color: white;
+  font-family: "SF Pro Display", sans-serif;
+}
+#whitespace {
+  margin-top: 88px;
+}
+#text {
+  padding-top: 47px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0px;
+}
+h1 {
+  font-size: 56px;
+  margin: 0px;
+  font-weight: 500;
+}
+h3 {
+  font-size: 28px;
+  line-height: 1.10722;
+  font-weight: 400;
+  letter-spacing: 0.004em;
+  font-family: "SF Pro Display", sans-serif;
+  margin-bottom: 0px;
+  margin-top: 6px;
+}
+li {
+  font-size: 21px;
+  color: #2997ff;
+}
+#learn {
+  margin: 0px 0px 0px -4px;
+}
+#buy {
+  margin: 0px 0px 0px 35px;
+}
