@@ -1,0 +1,51 @@
+img {
+  width: 300px;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.row image,
+.row div {
+  flex: 50%;
+}
+.row .btn {
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  padding: 8px 12px;
+  border-radius: 2px;
+  display: block;
+  margin: 40px 0px;
+  width: fit-content;
+}
+.row .btn:hover {
+  padding: 12px 16px;
+}
+::marker {
+  color: #ffdb58;
+  font-size: 25px;
+}
+h1 {
+  font-family: "Lora", serif;
+}
+p {
+  font-family: "Lora", serif;
+}
+a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: bold;
+}

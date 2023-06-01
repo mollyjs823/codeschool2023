@@ -1,0 +1,45 @@
+body {
+	font-family: 'Lora', sans-serif;
+	font-weight: 400;
+}
+h2 {
+	font-weight: 400;
+	font-size: 2em;
+	line-height: 28px;
+}
+a:not(.btn) {
+	color: inherit;
+	font-weight: 600;
+}
+.btn {
+	background: #000;
+	color: #fff;
+	transition: all 0.25s ease-out;
+	padding: 10px 20px;
+	border-radius: 2px;
+	display: inline-block; /* need for margin to work*/
+	margin-top: 24px;
+	text-decoration: none;
+}
+.btn:hover {
+	transform: scale(1.05);
+}
+.col-2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 64px;
+	width: 100%;
+	max-width: 800px;
+	margin: 100px auto;
+	min-height: 450px;
+}
+.col-2 img {
+	width: 300px;
+}
+
+::marker {
+	color: rgb(209, 183, 101);
+	font-size: 24px;
+}

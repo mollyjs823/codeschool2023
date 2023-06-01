@@ -1,0 +1,113 @@
+@font-face {
+  font-family: SF Distant Galaxy;
+  src: url(./SFDistantGalaxy.ttf);
+}
+
+header {
+  background-color: white;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, blue, red);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+p {
+  color: white;
+  font-size: 40px;
+  font-family: SF Distant Galaxy;
+  padding-left: 10px;
+  margin: 0;
+}
+
+h2 {
+  color: white;
+  font-size: 60px;
+  font-family: SF Distant Galaxy;
+  padding: 10px;
+}
+
+.field {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+}
+
+.column-1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+img {
+  max-width: 420px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 24px;
+}
+
+.button {
+  position: absolute;
+  left: 3rem;
+  bottom: 5rem;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+  background: rgba(241, 0, 0, 0.63);
+  border-radius: 2px;
+  padding: 4px;
+  font-family: SF Distant Galaxy;
+  border-bottom-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.button:hover {
+  background: rgba(241, 0, 0, 0.45);
+}
+
+.column-2 {
+  max-width: 420px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+  height: 684px;
+  margin-top: 24px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+@media only screen and (max-width: 980px) {
+  img {
+    max-width: 300px;
+  }
+
+  .field {
+    gap: 20px;
+  }
+
+  .column-2 {
+    max-width: 300px;
+    height: 494px;
+  }
+
+  p {
+    font-size: 20px;
+    max-width: 300px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .button {
+    font-size: 30px;
+    left: 2rem;
+  }
+}

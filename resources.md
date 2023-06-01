@@ -149,3 +149,13 @@ Google Fonts - [https://fonts.google.com/](https://fonts.google.com/)
 **Add Gradient to background image** - [WebDevEtc](https://webdevetc.com/blog/how-to-add-a-gradient-overlay-to-a-background-image-using-just-css-and-html/)
 
 **Github Pages | One Free hosted domain** - [https://pages.github.com/](https://pages.github.com/)
+
+
+**Git & GitHub (Different things y'all!)**
+Git Simplified - [git - the simple guide](https://rogerdudler.github.io/git-guide/)
+
+Git Cheat Sheet - [freeCodeCamp](https://www.freecodecamp.org/news/git-cheat-sheet/)
+
+GitHub Desktop - [Windows & Linux](https://www.simplilearn.com/how-to-use-github-desktop-tutorial-article)
+
+GitHub Desktop - [MacOS](https://www.youtube.com/watch?v=FYmnyi5eJ8E)
