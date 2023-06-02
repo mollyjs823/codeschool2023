@@ -11,15 +11,15 @@ Include things like your past projects and structure it so you can add new ones 
 Feel free to add things you would add to a resume.
 
 Examples:
-https://www.orestisgeorgiou.com/
-https://emilyhogarth.com/
-https://www.amandarachlee.com/
-https://helenabowen.com/
-https://dribbble.com/shots/https://dribbble.com/shots/7662998-Growth-Personal-Portfolio-Theme
-https://www.nathanielkoloc.com/
-https://www.pascalvangemert.nl/
-https://jimramsden.com/
-https://www.joshuamccartney.com/
+* https://www.orestisgeorgiou.com/
+* https://emilyhogarth.com/
+* https://www.amandarachlee.com/
+* https://helenabowen.com/
+* https://dribbble.com/shots/https://dribbble.com/shots/7662998-Growth-Personal-Portfolio-Theme
+* https://www.nathanielkoloc.com/
+* https://www.pascalvangemert.nl/
+* https://jimramsden.com/
+* https://www.joshuamccartney.com/
 
 
 # Guidelines
