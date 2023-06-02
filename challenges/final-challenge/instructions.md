@@ -15,7 +15,7 @@ Examples:
 * https://emilyhogarth.com/
 * https://www.amandarachlee.com/
 * https://helenabowen.com/
-* https://dribbble.com/shots/https://dribbble.com/shots/7662998-Growth-Personal-Portfolio-Theme
+* https://dribbble.com/shots/7662998-Growth-Personal-Portfolio-Theme
 * https://www.nathanielkoloc.com/
 * https://www.pascalvangemert.nl/
 * https://jimramsden.com/
@@ -29,6 +29,6 @@ Examples:
 3. You should have some sort of navigation (in-page or link to subpages/resources, depending on how you want to structure your site)
 4. It should be fully responsive from desktop to mobile screen sizes
 5. Try to use cool things we reviewed like hover effects, variables (ex: color) in your CSS, etc.
-6. External stylesheetm also use some sort of CSS reset
+6. External stylesheet also use some sort of CSS reset
 7. Send a copy of your compressed/zipped project folder to molly@thebanyanteam.com
 8. Be prepared to present your webpage and code with the class
