@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body style="padding:80px;">
+  <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">University</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Resident Tuition
+            &amp; Fees</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Non-Resident
+            Tuition &amp; Fees</th>
+        </tr>
+      </thead>
+      <tr></tr>
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap">Utah Tech University</td>
+        <td class="px-6 py-4 whitespace-nowrap">$2,748.00</td>
+        <td class="px-6 py-4 whitespace-nowrap">$7,896.00</td>
+      </tr>
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap">Southern Utah University</td>
+        <td class="px-6 py-4 whitespace-nowrap">$3,384.75</td>
+        <td class="px-6 py-4 whitespace-nowrap">$10,292.75</td>
+      </tr>
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap">Utah State University</td>
+        <td class="px-6 py-4 whitespace-nowrap">$3,929.72</td>
+        <td class="px-6 py-4 whitespace-nowrap">$11,402.35</td>
+      </tr>
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap">University of Utah</td>
+        <td class="px-6 py-4 whitespace-nowrap">$8,952.00</td>
+        <td class="px-6 py-4 whitespace-nowrap">$28,788.88</td>
+      </tr>
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap">Utah Valley University</td>
+        <td class="px-6 py-4 whitespace-nowrap">$2,910.00</td>
+        <td class="px-6 py-4 whitespace-nowrap">$8,285.00</td>
+      </tr>
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap">Weber State University</td>
+        <td class="px-6 py-4 whitespace-nowrap">$3,052.98</td>
+        <td class="px-6 py-4 whitespace-nowrap">$8,144.19</td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="mt-5 md:mt-0 md:col-span-2">
+    <form method="post" action="https://cit.dixie.edu/web/1400/mail.php">
+      <label class="block text-sm font-medium text-gray-700" for="myFName">First Name: </label>
+      <input
+        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+        type="text" id="myFName" name="myFName">
+      <label class="block text-sm font-medium text-gray-700" for="myLName">Last Name: </label>
+      <input
+        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+        type="text" id="myLName" name="myLName">
+      <label class="block text-sm font-medium text-gray-700" for="myEmail">*E-mail: </label>
+      <input
+        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+        type="email" id="myEmail" name="myEmail">
+      <label class="block text-sm font-medium text-gray-700" for="myPhone">Phone: </label>
+      <input
+        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+        type="tel" id="myPhone" name="myPhone">
+      <label class="block text-sm font-medium text-gray-700" for="myDate">Graduation Date: </label>
+      <input
+        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+        type="date" id="myDate" name="myDate">
+      <label class="block text-sm font-medium text-gray-700" for="myComments">Comments: </label><textarea
+        id="myComments" name="myComments" rows="2" cols="20"></textarea>
+      <input type="submit" id="mySubmit" value="Submit">
+    </form>
+  </div>
+</body>
+
+</html>
+
+</form>
