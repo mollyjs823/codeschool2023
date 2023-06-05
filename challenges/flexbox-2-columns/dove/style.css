@@ -1,0 +1,153 @@
+:root{
+    --white: rgb(255, 255, 255);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 12px 96px 12px 96px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    margin:0;
+    position: sticky;
+
+}
+.icofont-brand-icofont{
+    color:#00c3da;
+}
+.top-links a{
+    text-decoration: none;
+    color:inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.25s ease-in-out;
+    font-weight: bold;
+    font-size: 14px;
+    color: #454545;
+}
+.top-links a:hover{
+    color: #00c3da;
+}
+.top-links{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 18px;
+    margin:0;
+}
+.downloadBtn{
+    background-color: #00c3da;
+    border-radius: 3px;
+    color:#FFF;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+.downloadBtn span{
+    font-weight:bold;
+    margin-left: 6px;
+}
+.downloadBtn:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+.actions{
+    display:flex;
+    gap: 12px;
+    align-items: center;
+}
+.branding i{
+    font-size:32px;
+    color:#00c3da;
+}
+.shopping-bucket{
+    font-size: 32px;
+    color: #454545;
+    position:relative;
+}
+.shopping-bucket::after{
+    position: absolute;
+    content:"3";
+    background-color: #ed4266;
+    top: -6px;
+    right: -6px;
+    font-size: 12px;
+    color:#FFF;
+    padding: 4px;
+    border-radius: 3px;
+}
+.hero-image{
+    background-image: url("mixer.jpg");
+    background-image: linear-gradient(
+			to left,
+			rgba(0, 0, 0, 0.5),
+			rgba(0, 0, 0, 0.75)
+		),
+		url(mixer.jpg);
+    height:450px;
+    width:1200px;
+    background-position: center;
+    background-size: cover;
+    margin-left: 10%;
+}
+.hero-text{
+    padding-top: 50px;
+    padding-left: 50px;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    margin: 5vh;
+}
+h1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 30px;
+}
+p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+}
+button{
+    background-color: #3fb59f;
+    color: #FFF;
+    margin-top: 10px;
+    padding: 8px;
+    border:none;
+    border-radius: 3px;
+}
+button:hover{
+    background-color: #a3a2a2;
+    transition:1s;
+}
+#music-awards{
+    min-height:450px;
+    width: 300px;
+}
+.submitBtn{
+    margin-top: 5vh;
+    transform: scale(1.05);
+    background-color: #000;
+    padding: 8px 12px;
+    color: #FFF;
+    text-decoration: none;
+
+}
+::marker{
+    color: #a89932;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-family: 'Lora', serif;
+}
+a{
+    text-decoration: underline;
+    font-weight: bold;
+}
+ul{
+    margin-left: 40px;
+}

@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+  grid-template-rows: 4rem 300px repeat(5, 200px);
+  background-image: linear-gradient(#ebebeb, #ffffff);
+}
+
+.top-navbar {
+  grid-column: 2/-2;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: aliceblue;
+  padding: 15px;
+}
+
+.top-navbar h1 {
+  color: #454545;
+}
+
+.hero {
+  grid-column: 2/-2;
+  grid-row: 2/3;
+  background-image: url("codinghero.jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+}
+
+.box {
+  display: flex;
+  grid-column: 2/-2;
+  grid-row: 3/4;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 40px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 20px;
+  color: #2d2d2d;
+  padding-bottom: 100px;
+}
+.img {
+  background-image: url("HTML.svg");
+  height: 150px;
+  width: 150px;
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+}
+
+.HTML {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+}
+
+.content a {
+  text-decoration: none;
+  color: rgb(0, 94, 126);
+}
+
+.content a:hover {
+  background-color: rgb(0, 94, 126);
+  color: white;
+  padding: 3px;
+}
+.content h2 {
+  font-weight: bolder;
+  color: #202020;
+  padding-bottom: 25px;
+}
+
+.content h3 {
+  color: #1e1e1e;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.content h4 {
+  text-align: center;
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 960px) {
+  .box {
+    padding: 20px;
+    flex-direction: column;
+  }
+  .wrapper {
+    background-image: none;
+    grid-template-columns: auto;
+    grid-template-rows: 4rem 300px repeat(5, 200px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    background-image: none;
+  }
+  .box {
+    grid-row: 2;
+    gap: 0px;
+  }
+  .img {
+    background-image: none;
+    height: 0px;
+    width: 0px;
+  }
+  .HTML {
+    gap: 0px;
+  }
+}

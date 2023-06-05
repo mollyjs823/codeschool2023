@@ -1,0 +1,111 @@
+.navv {
+    padding: 12px 13vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navv img {
+    height: 4rem;
+    width: 4rem;
+}
+
+.doc {
+    height: auto;
+    width: auto;
+}
+
+.navv a {
+    font-size: large;
+    margin: 2vw 2vw;
+}
+
+.navv a:hover {
+    color: aqua;
+}
+
+.things {
+    margin-left: 13vw;
+}
+.plonto {
+    overflow: hidden;
+    margin-left: 63vw;
+    margin-right: 0px;
+    margin-bottom: 90rem;
+    padding: 0px;
+    width: 40%;
+    height: auto;
+    position: fixed;
+}
+
+body {
+    background-color: bisque;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project img {
+    width: auto;
+    height: auto;
+    margin: 2vw 1vh;
+    box-shadow: 0px 2px 5px rgba(0,0,0,.45);
+}
+
+.project {
+    padding: 0vh 1vw;
+    display: flex;
+    flex-wrap: nowrap;
+    border: 1px solid black;
+    width: 70vw;
+    margin-bottom: 12px;
+    background-image: linear-gradient(to bottom, rgba(200,200,200, .85), rgba(51,51,51, .55));
+}
+
+.project_1 {
+    overflow-x: scroll;
+    height: 400px;
+}
+
+.project_2 {
+    overflow-x: scroll;
+    height: 400px;
+}
+
+.project_3 {
+    overflow-x: scroll;
+    height: 400px;
+}
+
+.item_1 {
+    height: 200px;
+    width: 150px;
+}
+
+.loading {
+    background-image: url(groupclass.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    animation: loading 2.5s linear infinite;
+}
+
+.loading img {
+    box-shadow: none;
+
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
