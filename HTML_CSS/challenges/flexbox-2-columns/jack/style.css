@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Cinzel", serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+h1 {
+  font-weight: lighter;
+}
+
+p {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+#left {
+  background-image: url(./images/farm.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#right {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+#right div {
+  height: 33%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#right .divfix {
+  height: 34%;
+  background-position: 0% 90%;
+}
+
+#grapes {
+  background-image: url(./images/grapes.jpg);
+  background-size: cover;
+}
+
+#sustain {
+  background-image: url(./images/leaves.jpg);
+  background-size: cover;
+}
+
+#hospitality {
+  background-image: url(./images/building.jpg);
+  background-size: cover;
+}
+
+#right .text .line,
+.line {
+  height: 1px;
+  width: 300px;
+  background-color: black;
+}

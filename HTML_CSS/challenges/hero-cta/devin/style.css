@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.hero {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1),
+      rgba(255, 255, 255, 0)
+    ),
+    url(mixer-g0260d7dbb_1280.jpg);
+  max-width: 1200px;
+  height: 450px;
+  margin: auto;
+  margin-top: 10px;
+  color: white;
+}
+.flexy {
+  display: flex;
+  margin: auto;
+  margin-left: 0px;
+  padding: 100px;
+  padding-top: 125px;
+  width: 600px;
+  height: 300px;
+}
+h4 {
+  font-weight: 300;
+}
+#button {
+  padding: 7px 20px 7px 20px;
+  background-color: darkcyan;
+  border: solid 0px;
+  color: white;
+}
+#button:hover {
+  background-color: rgb(127, 255, 212, 0.5);
+  transform: scale(1.05);
+}
