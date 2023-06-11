@@ -4,7 +4,7 @@ Use the following screenshot and specifications listed below to build a simple c
 
 ![ConversionMockup](https://code.mollyshewchuk.com/resources/converter.jpg)
 1. The user should be able to convert kilobytes (kB) to bytes (B)
-2. The user should be able to convert bytes to megabits (Mb)
+2. The user should be able to convert bytes (B) to megabits (Mb)
 3. You will need to look up the conversion formulas for the two above
 4. When the user clicks the "convert" button for either of the conversions the answer should display near that area, include units in the answer
 5. When the input is not valid (not long enough or not a number), the convert button should be hidden
@@ -15,3 +15,4 @@ Use the following screenshot and specifications listed below to build a simple c
 If you have time:
 * Display an error message if the input is not a number
 * Round any the Mb conversion to 5 decimal places
+* Add other conversions that would be useful to you
