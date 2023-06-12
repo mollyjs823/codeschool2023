@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter Calculator</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Storage Units Converter</h1>
+        <div class="section">
+            <p>Kilobytes (kB) to Bytes (B)</p>
+            <input type="text" placeholder="kB" v-model="kilobytes">
+            <button @click="convertToB()" v-show="numberValid(kilobytes)">Convert to B</button>
+            <p v-show="calculatedBytes">{{calculatedBytes}} B</p>
+        </div>
+
+        <div class="section">
+            <p>Bytes (B) to Megabits (Mb)</p>
+            <input type="text" placeholder="B" v-model="bytes">
+            <button @click="convertToMb()" v-show="numberValid(bytes)">Convert to Mb</button>
+            <p v-show="calculatedMegabits">{{calculatedMegabits}} Mb</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
