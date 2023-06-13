@@ -23,6 +23,14 @@
             <input type="text" v-model="question">
             <button v-on:click="askQuestion" v-show="question.length > 1 && isValidQuestion()">Ask Question</button>
         </div>
+
+        <div>
+            <div v-for="item in history">
+                <p>Question: {{item.question}}</p>
+                <p>Answer: {{item.answer}}</p>
+                <button v-on:click="deleteItem(item)">X</button>
+            </div>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
