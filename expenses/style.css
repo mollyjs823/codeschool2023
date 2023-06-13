@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dk-gray: #2d2b35;
+    --blue: #3a68be;
+}
+
+body, #app {
+    width: 100%;
+    background-color: var(--dk-gray);
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    width: 100%;
+    background-color: var(--blue);
+    padding: 24px;
+    text-transform: uppercase;
+}
+
+.expenses {
+    width: 90%;
+    margin: 24px 0;
+    text-align: left;
+}
+
+.expenses > div:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.row-head, .row-body {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 60px;
+    display: grid;
+    grid-template-columns: 4fr 2fr 3fr;
+}
