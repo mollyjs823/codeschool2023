@@ -2,8 +2,6 @@
 
 Use the following screenshot and specifications listed below to build a simple Vue app:
 
-![ConversionMockup](https://code.mollyshewchuk.com/resources/converter.jpg)
-
 1. Feel free to use the Vue boilerplate code here: https://github.com/mollyjs823/codeschool2023/tree/main/vue-boilerplate
 
 2. Make a welcome message that is able to change. Hint: {{ ... }} and a data property
