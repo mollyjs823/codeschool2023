@@ -14,23 +14,45 @@
     <div id="app">
         <header>
             <h1>Expense Tracker</h1>
+            <input type="text" placeholder="Search..." v-model="search">
+            <div v-on:click="resetSearch()" id="reset">X</div>
         </header>
+
         <div class="expenses">
             <div class="row-head">
                 <div>Description</div>
-                <div>Amount</div>
+                <div>
+                    Amount 
+                    <span @click="sortExpenses()" v-if="sortOrder == 'asc'">&and;</span>
+                    <span @click="sortExpenses()" v-else>&or;</span>
+                </div>
                 <div>Category</div>
+                <div></div>
             </div>
-            <div v-for="exp in expenses" class="row-body">
+            <div v-for="exp in filteredExpenses" class="row-body" v-if="search.length > 0 && filteredExpenses.length > 0">
                 <div>{{exp.description}}</div>
                 <div v-bind:style="[exp.amount > 0 ? {color: 'var(--green)'} : {color: 'var(--red)'}]">{{exp.amount}}</div>
                 <div>{{exp.category}}</div>
+            </div>
+            <div v-for="(exp, index) in expenses" class="row-body" v-else>
+                <div>{{exp.description}}</div>
+                <div v-bind:style="[exp.amount > 0 ? {color: 'var(--green)'} : {color: 'var(--red)'}]">{{exp.amount}}</div>
+                <div>{{exp.category}}</div>
+                <button @click="toggleModal(index)">Edit</button>
             </div>
             <div class="row-footer">
                 <div>TOTAL</div>
                 <div v-bind:class="[{green: balance > 0}, {red: balance <= 0}]">{{balance}}</div>
                 <div></div>
+                <div></div>
             </div>
+        </div>
+
+        <div class="modal" v-show="modalOpen">
+            Description<input type="text" v-model="modal.description">
+            Amount<input type="text" v-model="modal.amount">
+            Category<input type="text" v-model="modal.category">
+            <button v-on:click="updateExpense()">Save</button>
         </div>
     </div>
     <script src="app.js"></script>
