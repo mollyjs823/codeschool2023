@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Vue Address Book</h1>
+      <input type="Text" placeholder="Enter Name" v-model="name" />
+      <input type="Text" placeholder="Enter Address" v-model="address" />
+      <button v-on:click="recordAdd()" id="addaddy">Record Address</button>
+      <div id="addresses" v-for="address in book">
+        <p>{{address.name}} {{address.email}}</p>
+        <button v-on:click="deleteAdd(address)" class="x">X</button>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

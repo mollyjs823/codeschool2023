@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+}
+
+#app {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 24px;
+}
+
+button {
+    background-color: rgb(119, 226, 119);
+    color: rgb(9, 119, 9);
+    border: 2px solid rgb(9, 119, 9);
+    border-radius: 24px;
+    padding: 5px;
+}

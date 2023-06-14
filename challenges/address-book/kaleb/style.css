@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#name {
+    color: white;
+    font-size: large;
+}
+body {
+    background-color: #03254c;
+}
+li{
+    color: white;
+}

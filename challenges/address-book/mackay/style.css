@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(41, 36, 109);
+}
+
+#app {
+  margin-top: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.inputBar {
+  border: none;
+  border-radius: 5px;
+  padding-left: 15px;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+}
+.recordBtn {
+  font-size: large;
+  color: gray;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  width: 175px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  z-index: 1;
+}
+
+.recordBtn:hover {
+  transform: scale(1.18);
+}
+.remove {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  color: #454545;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}

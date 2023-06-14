@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-color: rgb(56, 59, 86);
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.inputs {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.name {
+    margin: 10px;
+}
+
+.email {
+    margin: 10px;
+}
+
+.button {
+    margin: 10px;
+}
+
+p {
+    color: white;
+}
+
+.history {
+    margin-top: 65px;
+}

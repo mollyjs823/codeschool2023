@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Address Book</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- Content goes here -->
+      <h1>Vue Address Book</h1>
+      <input
+        class="inputBar"
+        type="text"
+        placeholder="Enter Name"
+        v-model="name"
+      />
+      <input
+        class="inputBar"
+        type="text"
+        placeholder="Enter Address"
+        v-model="address"
+      />
+      <button
+        v-if="address.length >= 2 & name.length >= 2"
+        class="recordBtn"
+        v-on:click="addAddy()"
+      >
+        Record Address
+      </button>
+      <h3 v-else>Fill Out Both Lines</h3>
+      <div v-for="item in addressList" class="list">
+        <p>{{item.name}} {{item.address}}</p>
+        <button class="remove" v-on:click="remove(item)">X</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

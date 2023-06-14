@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+
+</head>
+    <body>
+        <div id="app">
+            <div class="section">
+                <p> Kilobytes(kB) to Bytes(B)</p>
+                <input type="text" v-model="kilobytes">
+                <button v-on:click="convertToB()" v-show="numberValid(kilobytes)">Covert to B</button>
+                {{displayBytes}}
+            </div>
+            <div class="section">
+                <p> Bytes(B) to Megabits(Mb)</p>
+                <input type="text" v-model="megabits">
+                <button v-on:click="convertToMb()" v-show="numberValid(megabits)">Covert to Mb</button>
+                {{displayBits}}
+            </div>
+            
+        </div>
+    <script src="app.js"></script>   
+    </body>
+
+</html>

@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #172e4d;
+}
+#app {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+#addaddy {
+  width: 150px;
+  height: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+input {
+  height: 50px;
+  width: 200px;
+  background-color: white;
+  border-radius: 2px;
+  font-family: sans-serif;
+  border: none;
+  border-bottom: 3px lightgrey;
+  padding: 20px;
+}
+h1 {
+  font-family: sans-serif;
+  color: white;
+}
+p {
+  color: white;
+}
+.x {
+  background-color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+#addresses {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}

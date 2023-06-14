@@ -1,0 +1,55 @@
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #122b4a;
+}
+h1 {
+  color: white;
+  margin-top: 25px;
+}
+#app {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+input {
+  background-color: white;
+  width: 200px;
+  height: 40px;
+  border-radius: 3px;
+  box-shadow: none;
+  border: none;
+  padding: 0px 15px;
+}
+#recordInfo {
+  background-color: white;
+  width: 175px;
+  height: 50px;
+  border-radius: 7px;
+  font-size: 18px;
+  color: #455e80;
+  border: none;
+  box-shadow: 0px 3px grey;
+}
+.recordCont {
+  color: white;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+}
+.recordCont button {
+  background-color: white;
+  color: #122b4a;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.address {
+  font-style: italic;
+}

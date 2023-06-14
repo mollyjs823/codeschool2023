@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: antiquewhite;
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+div {
+  margin: 10px 0;
+}
+button {
+  padding: 5px 7px;
+}
+input {
+  padding: 10px;
+}

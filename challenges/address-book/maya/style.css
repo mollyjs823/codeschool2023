@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background-color: #000080;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.input {
+  display: flex;
+  margin: 30px auto;
+  padding: 10px;
+  background-color: white;
+  color: grey;
+}
+
+.record-address-button {
+  display: flex;
+  margin: 30px auto;
+  background-color: white;
+  color: black;
+  padding: 10px;
+}
+
+.entry {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 5%;
+}
+
+p {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.remove-entry {
+  display: flex;
+  margin: 10px auto;
+  padding: 5px;
+  background-color: white;
+  color: black;
+}

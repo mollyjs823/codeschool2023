@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue App</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>Vue Address Book</h1>
+      <input placeholder="Enter Name" id="nameInput" v-model="cName" />
+      <input placeholder="Enter Address" id="addressInput" v-model="cAdd" />
+      <button
+        id="recordInfo"
+        v-on:click="addA()"
+        v-if="validName() && validAddress()"
+      >
+        Record Address
+      </button>
+      <div v-for="record in records">
+        <div class="recordCont">
+          <p>{{record.name}}</p>
+          <p class="address">{{record.address}}</p>
+          <button v-on:click="editA(record)">E</button>
+          <button v-on:click="deleteA(record)">X</button>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
