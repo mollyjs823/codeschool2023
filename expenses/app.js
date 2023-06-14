@@ -43,13 +43,16 @@ Vue.createApp({
             }
             this.expenses.sort(compare);
         },
-        toggleModal: function(index) {
-            this.modalOpen = true;
-            let exp = this.expenses[index];
-            this.modal.index = index;
-            this.modal.description = exp.description;
-            this.modal.amount = exp.amount;
-            this.modal.category = exp.category;
+        toggleModal: function(index = null) {
+            console.log(index);
+            this.modalOpen = !this.modalOpen;
+            if (index !== null) {
+                let exp = this.expenses[index];
+                this.modal.index = index;
+                this.modal.description = exp.description;
+                this.modal.amount = exp.amount;
+                this.modal.category = exp.category;
+            }
         },
         updateExpense: function() {
             this.expenses[this.modal.index].description = this.modal.description;

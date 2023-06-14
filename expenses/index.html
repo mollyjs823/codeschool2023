@@ -49,10 +49,13 @@
         </div>
 
         <div class="modal" v-show="modalOpen">
-            Description<input type="text" v-model="modal.description">
-            Amount<input type="text" v-model="modal.amount">
-            Category<input type="text" v-model="modal.category">
-            <button v-on:click="updateExpense()">Save</button>
+            <div class="content">
+                <div id="close" @click="toggleModal()">X</div>
+                Description<input type="text" v-model="modal.description">
+                Amount<input type="text" v-model="modal.amount">
+                Category<input type="text" v-model="modal.category">
+                <button v-on:click="updateExpense()">Save</button>
+            </div>
         </div>
     </div>
     <script src="app.js"></script>
