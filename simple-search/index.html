@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Example</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" placeholder="Search..." v-model="search">
+        <br><br>
+        <table>
+            <thead>
+                <th>Breed</th>
+                <th>Size</th>
+            </thead>
+
+            <!-- DISPLAY FILTERED DOG LIST BASED ON SEARCH -->
+            <tbody v-if="filteredDogs && search">
+                <tr v-for="dog in filteredDogs">
+                    <td>{{dog.breed}}</td>
+                    <td>{{dog.size}}</td>
+                </tr>
+            </tbody>
+
+            <!-- DISPLAY IF NOT SEARCHING -->
+            <tbody v-else>
+                <tr v-for="dog in dogs">
+                    <td>{{dog.breed}}</td>
+                    <td>{{dog.size}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

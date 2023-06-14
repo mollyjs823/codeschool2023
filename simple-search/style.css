@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table {
+    min-width: 400px;
+}
+table tr {
+    background-color: rgb(243, 225, 202);
+}
+table tr:nth-child(even) {
+    background-color: rgb(253, 245, 233);
+}
+table td {
+    padding: 12px;
+}
