@@ -1,0 +1,30 @@
+Vue.createApp({
+  data() {
+    return {
+      namez: "",
+      welcome: "Welcome",
+      displayMessage: "",
+      items: [
+        { text: "light blue", color: "#ADD8E6" },
+        { text: "purple", color: "#9F2B68" },
+        { text: "green", color: "#00FF00" },
+      ],
+      activeColor: "#fff",
+    };
+  },
+  methods: {
+    welcomeMessage: function () {
+      var message = this.welcome + " " + this.namez + "!";
+      this.displayMessage = message;
+      console.log(message);
+    },
+    nameValid: function (namez) {
+      return namez.length > 0 && isNaN(namez);
+    },
+    changeColor: function (item) {
+      this.activeColor = item.color;
+      console.log(item);
+    },
+  },
+  created: function () {},
+}).mount("#app");

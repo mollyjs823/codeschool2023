@@ -1,0 +1,19 @@
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+#app {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+#hello {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 35px;
+  width: 95%;
+  padding: 15px;
+}

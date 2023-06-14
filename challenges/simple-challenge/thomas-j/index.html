@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue App</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div id="top">
+            <div id="name-area" >
+                <h1 v-bind:style="{backgroundColor: activeColor}">{{name}}</h1>
+            </div>
+        </div>
+
+        <input type="text" v-model = "nameInput">
+
+        <button v-on:click="updateName()">Enter</button>
+
+        <p id="color1" v-on:click="changeColor('aquamarine')">aquamarine</p>
+        <p id="color2" v-on:click="changeColor('coral')">coral</p>
+        <p id="color3" v-on:click="changeColor('cadetblue')">cadetblue</p>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

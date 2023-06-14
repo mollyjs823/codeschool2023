@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue App</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1 class="banner-welcome" v-bind:style="{backgroundColor: color}">{{ welcomeMessage }}</h1>
+        <input class="username-input" type="text" v-model="userName" placeholder="Enter your name" />
+        <button class="submit-username-btn" v-if="validUserName()" v-on:click="updateUserName()">Submit
+            Username</button>
+        <div class="color-btn-container">
+            <div v-for="color in colors">
+                <button v-on:click="changeColor(color)" v-bind:style="{backgroundColor: color, color: '#fff'}"
+                    class="color-btn">{{ color
+                    }}</button>
+            </div>
+            <button v-if="!addingColor" class="color-btn" v-on:click="showAddColor()">Add Color</button>
+            <div v-else class="color-btn color-add-container" v-bind:style="{backgroundColor: inputColor}">
+                <input class="color-input" type="text" v-model="inputColor" placeholder="Enter a color" />
+                <button class="color-btn-submit" v-on:click="addColor(color)">Submit Color</button>
+            </div>
+        </div>
+        <!-- Content goes here -->
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

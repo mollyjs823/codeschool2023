@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ebeff3;
+  font-family: sans-serif;
+}
+
+#app {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  min-height: 300px;
+}
+
+h1 {
+  flex: 100%;
+  text-align: center;
+  height: 100px;
+}
+
+input {
+  height: 20px;
+  width: 200px;
+}
+
+.color-area {
+  margin: 1rem;
+}

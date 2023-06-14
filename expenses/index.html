@@ -23,8 +23,13 @@
             </div>
             <div v-for="exp in expenses" class="row-body">
                 <div>{{exp.description}}</div>
-                <div>{{exp.amount}}</div>
+                <div v-bind:style="[exp.amount > 0 ? {color: 'var(--green)'} : {color: 'var(--red)'}]">{{exp.amount}}</div>
                 <div>{{exp.category}}</div>
+            </div>
+            <div class="row-footer">
+                <div>TOTAL</div>
+                <div v-bind:class="[{green: balance > 0}, {red: balance <= 0}]">{{balance}}</div>
+                <div></div>
             </div>
         </div>
     </div>

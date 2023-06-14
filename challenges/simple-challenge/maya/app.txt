@@ -1,0 +1,28 @@
+Vue.createApp({
+  data() {
+    return {
+      message: "User",
+      activeColor: "#FFFFFF",
+      name: null,
+
+      colors: [
+        { text: "blue", hue: "#0000FF" },
+        { text: "green", hue: "#00FF00" },
+        { text: "red", hue: "#FF0000" },
+      ],
+    };
+  },
+  methods: {
+    changeColor: function (color) {
+      let colorName = color.text;
+      // console.log(colorName);
+      this.activeColor = color.hue;
+      // console.log(this.activeColor);
+    },
+    appendText: function () {
+      this.message = this.name;
+      this.name = "";
+    },
+  },
+  created: function () {},
+}).mount("#app");
