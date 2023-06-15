@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('./bg-image.png');
+    background-attachment: fixed;
+    backdrop-filter: blur(10px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#app {
+    padding-top: 48px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+h2 {
+    color: purple;
+}
+.rand-joke {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px
+}
+button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+button:hover {
+    background-color: rgb(141, 48, 141);
+}
+
+.jokes-list {
+    margin: 48px 24px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    width: 90%;
+}
+
+ul li {
+    list-style-type: none;
+    background-color: rgba(5, 34, 147, 0.2);
+    padding: 12px;
+}
+ul li:nth-child(even) {
+    background-color: rgba(84, 149, 192, 0.2);
+}
+
+input {
+    padding: 12px;
+}
