@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <main>
+            <h1>To-Do List</h1>
+            <div class="form">
+                <h2>Add Item</h2><br>
+                <label>
+                    <span>Description</span>
+                    <input type="text" v-model="newItem.description">
+                </label>
+                <label>
+                    <span>Category</span>
+                    <input type="text" v-model="newItem.category">
+                </label>
+                <button @click="addItem()">Add</button>
+            </div>
+            <br><br><br>
+            <div class="container">
+                <input type="text" placeholder="Search..." v-model="search">
+                <div>Sort By Category</div>
+                <br><br>
+
+                <!-- Filtered/Search items -->
+                <div v-for="(item, index) in filteredItems" class="item" v-if="search && filteredItems.length">
+                    <div>{{item.description}}</div>
+                    <div>{{item.category}}</div>
+                    <div class="btn" @click="toggleEdit(index)">Edit</div>
+                    <div class="btn" @click="deleteItem(index)">Delete</div>
+                </div>
+
+                <!-- Default list -->
+                <div v-for="(item, index) in items" class="item" v-else>
+                    <div>{{item.description}}</div>
+                    <div>{{item.category}}</div>
+                    <div class="btn" @click="toggleEdit(index)">Edit</div>
+                    <div class="btn" @click="deleteItem(index)">Delete</div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Sidebar translates on the x axis into view when the user clicks edit -->
+        <div class="sidebar-underlay" v-show="sidebar.show" @click="toggleEdit()"></div>
+        <div class="sidebar" v-bind:class="{show: sidebar.show}" >
+            <div class="close" @click="toggleEdit()">></div>
+            <label>
+                <span>Description</span>
+                <input type="text" v-model="sidebar.description">
+            </label>
+            <label>
+                <span>Category</span>
+                <input type="text" v-model="sidebar.category">
+            </label>
+            <button @click="updateItem(sidebar.item)">Save</button>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

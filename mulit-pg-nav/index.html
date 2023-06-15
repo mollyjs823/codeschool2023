@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue App</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <nav>
+            <div @click="goToPage(1)">Page 1</div>
+            <div @click="goToPage(2)">Page 2</div>
+            <div @click="goToPage(3)">Page 3</div>
+        </nav>
+<br><br>
+        <div class="page" v-if="page == 1">
+            PAGE 1
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto autem, consequuntur accusantium tempore reiciendis nemo voluptatem aperiam unde repudiandae eum, possimus distinctio saepe? Est quia, expedita vitae tempora totam eveniet?
+        </div>
+        <div class="page" v-show="page == 2">
+            PAGE 2
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto autem, consequuntur accusantium tempore reiciendis nemo voluptatem aperiam unde repudiandae eum, possimus distinctio saepe? Est quia, expedita vitae tempora totam eveniet?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, culpa veritatis incidunt iste ad deserunt perferendis soluta libero eius accusantium natus corporis ducimus illum hic aperiam aliquid magnam ipsa asperiores.
+        </div>
+        <div class="page" v-if="page == 3">
+            PAGE 3
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto autem, consequuntur accusantium tempore reiciendis nemo voluptatem aperiam unde repudiandae eum, possimus distinctio saepe? Est quia, expedita vitae tempora totam eveniet?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur corporis facere odio illum sequi aut, voluptatem asperiores, quam minus, dignissimos aliquid voluptate enim repellat libero quo vitae iste possimus esse?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi deleniti id recusandae magni. Fugit vero facilis totam nesciunt assumenda animi mollitia, excepturi ad veritatis provident aliquid neque nostrum itaque vitae.
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
