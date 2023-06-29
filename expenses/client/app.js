@@ -60,9 +60,30 @@ Vue.createApp({
             }
         },
         updateExpense: function() {
-            this.expenses[this.modal.index].description = this.modal.description;
-            this.expenses[this.modal.index].amount = parseFloat(this.modal.amount);
-            this.expenses[this.modal.index].category = this.modal.category;
+            myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+            var encodedData = "description=" + encodeURIComponent(this.modal.description) + 
+                                "&amount=" + encodeURIComponent(this.modal.amount) + 
+                                "&category=" + encodeURIComponent(this.modal.category);
+
+            var requestOptions = {
+                method: "PUT",
+                body: encodedData,
+                headers: myHeaders
+            };
+            
+            var expId = this.expenses[this.modal.index]._id;
+            fetch(`http://localhost:8080/expenses/${expId}`, requestOptions)
+            .then((response) => {
+                if (response.status === 204) {
+                    this.expenses[this.modal.index].description = this.modal.description;
+                    this.expenses[this.modal.index].amount = parseFloat(this.modal.amount);
+                    this.expenses[this.modal.index].category = this.modal.category;
+                } else {
+                    alert("Not able to add expense");
+                }
+            });
         },
         addExpense: function() {
             myHeaders = new Headers();
@@ -95,7 +116,7 @@ Vue.createApp({
                 } else {
                     alert("Not able to add expense");
                 }
-            })
+            });
         }
     },
     created : function() {
