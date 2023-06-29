@@ -49,7 +49,6 @@ Vue.createApp({
             this.expenses.sort(compare);
         },
         toggleModal: function(index = null) {
-            console.log(index);
             this.modalOpen = !this.modalOpen;
             if (index !== null) {
                 let exp = this.expenses[index];
@@ -83,6 +82,7 @@ Vue.createApp({
                 } else {
                     alert("Not able to add expense");
                 }
+                this.toggleModal();
             });
         },
         addExpense: function() {
@@ -98,21 +98,16 @@ Vue.createApp({
                 body: encodedData,
                 headers: myHeaders
             };
-            console.log(encodedData);
+
             fetch("http://localhost:8080/expenses", requestOptions)
             .then((response) => {
                 if (response.status === 201) {
+                    // If you do it this way make sure you're returning the new object from your server
+                    // The "data" that we get is in the response from the server's POST request handler
                     response.json().then((data) => {
                         this.expenses.push(data);
                         this.newExpense = {};
                     });
-                    
-                    // this.expenses.push({
-                    //     description: this.newExpense.description,
-                    //     amount: this.newExpense.amount,
-                    //     category: this.newExpense.category
-                    // });
-                    // this.newExpense = {};
                 } else {
                     alert("Not able to add expense");
                 }
