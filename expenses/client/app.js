@@ -12,12 +12,17 @@ Vue.createApp({
                 description: "",
                 amount: "",
                 category: ""
+            },
+            newExpense: {
+                description: "",
+                amount: "",
+                category: ""
             }
         }
     },
     methods : {
         getExpenses: function() {
-            fetch('https://expenses.codeschool.cloud/expenses')
+            fetch('http://localhost:8080/expenses')
             .then(response => response.json()).then((data) => {
                 this.expenses = data;
             });
@@ -58,6 +63,39 @@ Vue.createApp({
             this.expenses[this.modal.index].description = this.modal.description;
             this.expenses[this.modal.index].amount = parseFloat(this.modal.amount);
             this.expenses[this.modal.index].category = this.modal.category;
+        },
+        addExpense: function() {
+            myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+            var encodedData = "description=" + encodeURIComponent(this.newExpense.description) + 
+                                "&amount=" + encodeURIComponent(this.newExpense.amount) + 
+                                "&category=" + encodeURIComponent(this.newExpense.category);
+
+            var requestOptions = {
+                method: "POST",
+                body: encodedData,
+                headers: myHeaders
+            };
+            console.log(encodedData);
+            fetch("http://localhost:8080/expenses", requestOptions)
+            .then((response) => {
+                if (response.status === 201) {
+                    response.json().then((data) => {
+                        this.expenses.push(data);
+                        this.newExpense = {};
+                    });
+                    
+                    // this.expenses.push({
+                    //     description: this.newExpense.description,
+                    //     amount: this.newExpense.amount,
+                    //     category: this.newExpense.category
+                    // });
+                    // this.newExpense = {};
+                } else {
+                    alert("Not able to add expense");
+                }
+            })
         }
     },
     created : function() {
