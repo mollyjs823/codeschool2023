@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue App</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>To-Do List</h1>
+        <h2>Add Item</h2>
+
+        <div class="inputs">
+            <input type="text" placeholder="Description" v-model="description">
+            <input type="text" placeholder="Category" v-model="category">
+            <button @click="appendItems()">Add</button>
+        </div>
+        
+        <input type="text" placeholder="search" v-model="search">
+        <button @click="findItem()" v-if="search.length > 0"></button>
+
+        <div  v-show="false">
+            Description<input type="text" v-model="modal.description">
+            Category<input type="text" v-model="modal.category">
+            <button>Edit</button>
+        </div>
+
+        <div class="content" v-for="(item, index) in modal">
+            Description
+            {{item.description}}
+            Category
+            {{item.category}}
+            <button @click="editItem(index)">Edit</button>
+        </div>
+        
+        <div class="modal" v-show="modalOpen">
+            description<input type="text" placeholder="change description" v-model="edited.description">
+            category<input type="text" placeholder="change category" v-model="edited.category">
+            <button @click="saveChanges()">Save</button>
+        </div>
+
+
+
+ 
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

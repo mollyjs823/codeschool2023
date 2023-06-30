@@ -22,4 +22,4 @@ To get more complicated / if you have time:
 
 
 * You can style it however you'd like as long as it's clean and easy to use.
-* Send a copy of your compressed/zipped project folder to molly@thebanyanteam.com OR upload it to either GitHub or Google Drive and send a link.
+* Upload your project to GitHub and send a link or add me as a collaborator (mollyjs823).

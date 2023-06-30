@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+#app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.address-card {
+    width: 700px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.address-card h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.add-address-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.single-address-card {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.single-address-card p {
+    font-size: inherit;
+    margin: 5px 0;
+}
+
+.edit-address-btn {
+    display: inline;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background-color: #2196f3;
+    color: white;
+}
+
+.remove-address-btn {
+    margin: 0px 10px;
+    display: inline;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background-color: #f44336;
+    color: white;
+}
+
+.submit-edit-address-btn {
+    display: inline;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background-color: #4caf50;
+    color: white;
+}

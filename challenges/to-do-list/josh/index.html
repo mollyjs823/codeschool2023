@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue App</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <header><h1>To-Do List</h1></header>
+      <div id="input">
+        <h2>Add Item</h2>
+        <p>Description</p>
+        <input type="text" v-model="description" />
+        <p>Category</p>
+        <input type="text" v-model="category" />
+        <button @click="add()">Add</button>
+        <p v-show="complete">Fields not Complete</p>
+      </div>
+
+      <div id="search">
+        <input
+          type="text"
+          v-model="search"
+          placeholder="Search"
+          id="searchbar"
+        />
+        <div v-on:click="clearSearch()" id="clearsearch">X</div>
+        Sort By Category
+      </div>
+      <div id="listy">
+        <div class="row-body">
+          <p>Category</p>
+          <p>Description</p>
+        </div>
+        <div
+          v-for="(item, index) in toDoFiltered"
+          class="row-body"
+          v-if="search.length > 0 && toDoFiltered.length > 0"
+        >
+          <div>{{item.category}}</div>
+          <div>{{item.description}}</div>
+          <button @click="toggleModal(index)">Edit</button>
+          <button @click="deleteItem(index)">Delete</button>
+        </div>
+        <div v-for="(item, index) in toDo" class="row-body" v-else>
+          <div>{{item.category}}</div>
+          <div>{{item.description}}</div>
+          <button @click="toggleModal(index)">Edit</button>
+          <button @click="deleteItem(index)">Delete</button>
+        </div>
+      </div>
+      <div class="modal" v-show="modalOpen">
+        <div @click="toggleModal()" id="close">X</div>
+        <p>Description</p>
+        <input type="text" v-model="modal.description" />
+        <p>Category</p>
+        <input type="text" v-model="modal.category" />
+        <button @click="updateToDo()" id="buttonSave">Save</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+:root {
+  --dk-light: rgb(17, 146, 153);
+  --norm: rgb(17, 139, 153);
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: teal;
+}
+#app {
+  width: 90%;
+}
+h1 {
+  text-align: center;
+  margin: 30px 10px 10px 10px;
+}
+h2 {
+  margin: 10px 0;
+}
+input {
+  padding: 10px;
+  width: 100%;
+}
+p {
+  margin-bottom: 5px;
+}
+#search {
+  margin-top: 45px;
+}
+#data {
+  margin-top: 10px;
+  background-color: var(--dk-light);
+  color: black;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+.toDo {
+  width: 90%;
+  margin: 24px 0;
+  text-align: left;
+}
+#addButton {
+  margin-top: 10px;
+  background-color: #199;
+}
+.row-body,
+.row-head {
+  background-color: rgba(255, 255, 255, 0.25);
+  height: 60px;
+  display: grid;
+  grid-template-columns: 4fr 2fr 1fr 1fr;
+}
+.toDo > div:nth-child(even) {
+  background-color: var(--norm);
+}
+#data div {
+  align-items: center;
+}
+button {
+  background-color: #199;
+  border: none;
+  padding: 0 20px;
+  width: fit-content;
+  height: 30px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,600;1,100&family=Poppins:wght@200;500;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <h1>To-Do List</h1>
+      <div class="top-container">
+        <div class="creating">
+          <h2>Add Item</h2>
+          <span class="desc-add">Description</span>
+          <input type="text" class="desc-add" v-model="description" />
+          <span class="cat-add">Category</span>
+          <input type="text" class="cat-add" v-model="category" />
+          <button id="add-button" v-on:click="addItem()">Add</button>
+        </div>
+        <div class="categories">
+          <ul>
+            <li class="school" @click="instantCategory('School')">School</li>
+            <li class="work" @click="instantCategory('Work')">Work</li>
+            <li class="chores" @click="instantCategory('Chores')">Chores</li>
+            <li class="self-care" @click="instantCategory('Self Care')">
+              Self Care
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="list-header">
+        <div class="list list-title">Description</div>
+        <div class="list list-title">Category</div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="list-container" v-for="(item, index) in toDoList">
+        <div class="list list-content">{{item.description}}</div>
+        <div
+          class="list list-content"
+          v-bind:style="{color: categoryColor(index)}"
+        >
+          {{item.category}}
+        </div>
+        <button class="list" v-on:click="editItem(index)">EDIT</button>
+        <button class="list" v-on:click="deleteItem(index)">DELETE</button>
+      </div>
+      <div id="modal" v-show="editOpen">
+        <span class="modal">Description</span>
+        <input type="text" class="modal" v-model="editModal.description" />
+        <span class="modal">Category</span>
+        <input type="text" class="modal" v-model="editModal.category" />
+        <button class="modal" v-on:click="closeModal()">DONE</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

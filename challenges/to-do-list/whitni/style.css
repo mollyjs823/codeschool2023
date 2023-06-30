@@ -1,0 +1,23 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.inputs{
+    display:flex;
+    flex-direction:column;
+
+
+}
+
+.modal{
+    display:flex;
+    flex-direction:column;
+}
+
+.content{
+    padding-right:30px;
+    
+}

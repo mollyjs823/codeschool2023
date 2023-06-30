@@ -1,0 +1,25 @@
+Vue.createApp({
+  data() {
+    return {
+      jokes: [],
+      currentJoke: "",
+    };
+  },
+  methods: {
+    getJoke: function () {
+      fetch("https://code.mollyshewchuk.com/jokes")
+        .then((response) => response.json())
+        .then((data) => {
+          this.jokes = data;
+          this.newJoke();
+        });
+    },
+    newJoke: function (index) {
+      const randomIndex = Math.floor(Math.random() * this.jokes.length);
+      this.currentJoke = this.jokes[randomIndex];
+    },
+  },
+  created: function () {
+    this.getJoke();
+  },
+}).mount("#app");

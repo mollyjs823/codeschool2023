@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --grey: rgba(0, 0, 0, 0.8);
+  --blue: rgba(32, 42, 88, 0.8);
+  --lgrey: rgba(0, 0, 0, 0.03);
+  --Lgrey: rgba(0, 0, 0, 0.1);
+  --pink: rgba(244, 126, 209, 0.8);
+  --green: rgba(81, 222, 107, 0.8);
+  --purple: rgba(209, 69, 236, 0.8);
+  --teal: rgb(55, 238, 241, 0.8);
+}
+
+.top-container {
+  display: grid;
+  width: 100%;
+  grid-template-rows: 50% 50%;
+}
+
+.categories {
+  grid-column: 2/3;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.school,
+.work,
+.chores,
+.self-care {
+  list-style: none;
+  list-style-type: square;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.school {
+  color: var(--pink);
+}
+
+.work {
+  color: var(--green);
+}
+
+.chores {
+  color: var(--purple);
+}
+
+.self-care {
+  color: var(--teal);
+}
+
+.creating {
+  margin: 5px 30px;
+  padding-bottom: 30px;
+  color: var(--grey);
+  grid-column: 1/2;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 800;
+  color: var(--grey);
+  padding: 40px 0;
+}
+
+h2 {
+  font-weight: 500;
+  color: var(--blue);
+}
+
+.desc-add,
+.cat-add {
+  display: block;
+  margin: 10px;
+}
+
+span.desc-add,
+span.cat-add {
+  font-weight: 200;
+}
+
+#add-button {
+  font-size: 10px;
+  padding: 5px 20px;
+  margin-top: 10px;
+  background-color: var(--blue);
+  color: white;
+}
+
+button.list {
+  background-color: var(--blue);
+  color: white;
+}
+
+.list-container {
+  background-color: var(--Lgrey);
+  padding: 25px;
+  border-radius: 5px;
+  color: var(--blue);
+}
+
+.list-container:nth-of-type(even) {
+  background-color: var(--lgrey);
+}
+
+.list-container,
+.list-header {
+  display: grid;
+  margin: 20px 30px;
+  grid-template-columns: 35% 35% 15% 15%;
+}
+
+.list-content {
+  font-weight: 200;
+}
+
+.list-title {
+  font-weight: 500;
+  color: var(--grey);
+}
+
+#modal {
+  display: block;
+  background-color: var(--blue);
+  width: 80%;
+  height: 80%;
+  position: fixed;
+  top: 10%;
+  bottom: 10%;
+  right: 10%;
+  left: 10%;
+  justify-content: center;
+  align-items: center;
+  padding: 30% 10%;
+  border-radius: 10px;
+  border: 3px solid var(--grey);
+}
+
+.modal {
+  display: block;
+  color: white;
+}
+
+input.modal {
+  padding: 10px;
+  color: var(--grey);
+}
+
+span.modal {
+  margin: 10px 0;
+}
+
+button.modal {
+  background-color: white;
+  color: var(--grey);
+  margin: 10px 0;
+  padding: 5px 10px;
+}

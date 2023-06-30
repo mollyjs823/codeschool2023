@@ -37,6 +37,3 @@ To get more complicated / if you have time:
 
 
 * You can style it however you'd like as long as it's clean and easy to use.
-* Upload your project to GitHub and send a link or add me as a collaborator (mollyjs823). 
-
-molly@thebanyanteam.com

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="address-card">
+            <h1>Address Book</h1>
+            <div class="add-address-card-container">
+                <input class="input-box" type="text" placeholder="Name" v-model="name" />
+                <input class="input-box" type="text" placeholder="Enter Address" v-model="address" />
+                <button class="add-address-btn" v-on:click="addAddress()">Add Address</button>
+            </div>
+            <div class="address-book">
+                <div class="single-address-card" v-for="address in addressBook">
+                    <input class="input-box" v-if="address.editShow" v-model="editName" />
+                    <p v-else>{{ address.name }}</p>
+                    <input class="input-box" v-if="address.editShow" v-model="editAddress" />
+                    <p v-else>{{ address.address }}</p>
+                    <button v-if="!address.editShow" class="edit-address-btn"
+                        v-on:click="editAddressFunction(address)">Edit Address</button>
+                    <button v-else class="submit-edit-address-btn" v-on:click="submitEditAddress(address)">Submit
+                        Edit</button>
+                    <button v-if="!address.editShow" class="remove-address-btn"
+                        v-on:click="removeAddress(address)">Remove Address</button>
+                    <button v-else class="remove-address-btn" v-on:click="cancelEditAddress(address)">Cancel
+                        Edit</button>
+                </div>
+            </div>
+        </div>
+        <!-- Content goes here -->
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
