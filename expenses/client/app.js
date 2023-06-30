@@ -2,7 +2,6 @@ Vue.createApp({
     data() {
         return {
             expenses: [],
-            // balance: 0,
             search: "",
             filteredExpenses: [],
             sortOrder: "",
@@ -110,6 +109,21 @@ Vue.createApp({
                     });
                 } else {
                     alert("Not able to add expense");
+                }
+            });
+        },
+        deleteExpense: function(index) {
+            var expId = this.expenses[index]._id;
+            var requestOptions = {
+                method: "DELETE"
+            };
+            fetch(`http://localhost:8080/expenses/${expId}`, requestOptions)
+            .then((response) => {
+                if (response.status === 204) {
+                    console.log("success");
+                    this.expenses.splice(index, 1);
+                } else {
+                    alert("Unable to delete expense");
                 }
             });
         }

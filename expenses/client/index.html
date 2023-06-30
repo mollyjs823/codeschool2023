@@ -38,6 +38,7 @@
                 <div>{{exp.description}}</div>
                 <div v-bind:style="[exp.amount > 0 ? {color: 'var(--green)'} : {color: 'var(--red)'}]">{{exp.amount}}</div>
                 <div>{{exp.category}}</div>
+                <button @click="deleteExpense(index)">Delete</button>
                 <button @click="toggleModal(index)">Edit</button>
             </div>
             <div class="row-footer">
