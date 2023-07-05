@@ -20,6 +20,7 @@ Vue.createApp({
             fetch(URL + "session", options)
             .then(response => response.json())
             .then(data => {
+                console.log(data);
                 if (data && data.cookie && data.userId) {
                     this.page = "";
                 } else {
