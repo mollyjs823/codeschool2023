@@ -3,7 +3,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --dk-blue: rgb(25, 25, 34);
+}
 
 [v-cloak] {
     display: none;
+}
+
+#app, body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--dk-blue);
+    color: white;
+    font-family: 'Trebuchet MS', 'sans-serif';
+}
+
+
+form {
+    margin: 24px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 24px;
+}
+form label {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
 }
