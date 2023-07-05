@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <div class="page" v-if="page === 'auth'">
+            <h1>Kahooot!</h1>
+            <h2>Sign Up</h2>
+            <form @submit.prevent="signup()">
+                <label>
+                    <span>Name</span>
+                    <input type="text" v-model="user.name">
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" v-model="user.email">
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" v-model="user.password">
+                </label>
+                <button>Sign Up!</button>
+            </form>
+
+            <h2>Log In</h2>
+            <form @submit.prevent="createSession()">
+                <label>
+                    <span>Name</span>
+                    <input type="text" v-model="user.name">
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" v-model="user.email">
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" v-model="user.password">
+                </label>
+                <button>Log In!</button>
+            </form>
+        </div>
+
+        <div class="page" v-if="page === ''">
+            <h2>Quizzes</h2>
+            <p>Our current quizzes</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
