@@ -74,22 +74,23 @@
                 <div class="question" v-for="(question, index) in newQuestions">
                     <label>
                         <span>Question Text</span>
-                        <input type="text">
+                        <input type="text" v-model="question.questionText">
                     </label>
                     <!-- Repeat for a in answers -->
                     <div class="answer" v-for="answer in question.possibleChoices">
                         <label>
                             <span>Answer Text</span>
-                            <input type="text">
+                            <input type="text" v-model="answer.answerText">
                         </label>
                         <label>
                             <span>It is correct?</span>
-                            <input type="text">
+                            <input type="text" v-model="answer.isCorrect">
                         </label>
                     </div>
                     <button type="button" @click="addAnswer(index)">Add Answer</button>
                 </div>
                 <button type="button" @click="addQuestion()">Add Question</button>
+                <button>Create Quiz</button>
             </form>
 
         </div>

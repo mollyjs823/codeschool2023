@@ -128,6 +128,28 @@ Vue.createApp({
         },
         addAnswer: function(index) {
             this.newQuestions[index].possibleChoices.push({answerText: "", isCorrect: false});
+        },
+        createQuiz: function() {
+            // Title, description, list of questions
+            // Question: list of answers
+            // Answer: text, if correct
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            this.newQuiz.questions = this.newQuestions;
+
+            var options = {
+                method: "POST",
+                credentials: "include",
+                body: JSON.stringify(this.newQuiz),
+                headers: myHeaders
+            };
+
+            fetch(URL + "quizzes", options)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            });
         }
     },
     created : function() {
