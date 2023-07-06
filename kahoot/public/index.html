@@ -50,8 +50,48 @@
         </div>
 
         <div class="page" v-if="page === ''">
+            <div @click="logout()">Logout</div>
+            <div @click="page = 'createQuiz'">Add Quiz</div>
             <h2>Quizzes</h2>
             <p>Our current quizzes</p>
+        </div>
+
+        <div class="page" v-if="page === 'createQuiz'">
+            <div @click="page = ''">&lt; Back</div>
+            <h2>Create Quiz</h2>
+            <!-- Form to create quiz -->
+            <form @submit.prevent="createQuiz()">
+                <label>
+                    <span>Quiz Title</span>
+                    <input type="text" v-model="newQuiz.title">
+                </label>
+                <label>
+                    <span>Quiz Description</span>
+                    <input type="text" v-model="newQuiz.description">
+                </label>
+                <h3>Questions</h3>
+                <!-- Repeat for q in newQuestions -->
+                <div class="question" v-for="(question, index) in newQuestions">
+                    <label>
+                        <span>Question Text</span>
+                        <input type="text">
+                    </label>
+                    <!-- Repeat for a in answers -->
+                    <div class="answer" v-for="answer in question.possibleChoices">
+                        <label>
+                            <span>Answer Text</span>
+                            <input type="text">
+                        </label>
+                        <label>
+                            <span>It is correct?</span>
+                            <input type="text">
+                        </label>
+                    </div>
+                    <button type="button" @click="addAnswer(index)">Add Answer</button>
+                </div>
+                <button type="button" @click="addQuestion()">Add Question</button>
+            </form>
+
         </div>
     </div>
     <script src="app.js"></script>

@@ -8,10 +8,40 @@ Vue.createApp({
                 name: "",
                 email: "",
                 password: ""
-            }
+            },
+
+            quizzes: [],
+            newQuiz: {
+                title: "",
+                description: "",
+                questions: []
+            },
+            newQuestions: [
+                {
+                    questionText: "",
+                    possibleChoices: [
+                        {answerText: "", isCorrect: true}
+                    ]
+                }
+            ]
         }
     },
     methods : {
+        logout: function() {
+            var options = {
+                method: "DELETE",
+                credentials: "include"
+            };
+
+            fetch(URL + "session", options).then(response => {
+                this.page = "auth";
+                this.user = {
+                    name: "",
+                    email: "",
+                    password: ""
+                };
+            })
+        },
         loggedIn: function() {
             var options = {
                 credentials: "include"
@@ -20,7 +50,6 @@ Vue.createApp({
             fetch(URL + "session", options)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
                 if (data && data.cookie && data.userId) {
                     this.page = "";
                 } else {
@@ -65,7 +94,6 @@ Vue.createApp({
             .then((response) => {
                 if (response.status === 201) {
                     response.text().then((data) => {
-                        console.log(data);
                         if (data) {
                             data = JSON.parse(data);
                             this.page = "";
@@ -80,9 +108,30 @@ Vue.createApp({
                     });
                 }
             });
+        },
+
+        getQuizzes: function() {
+            fetch(URL + "quizzes")
+            .then(response => response.json())
+            .then(data => {
+                this.quizzes = data;
+                console.log(data);
+            });
+        },
+        addQuestion: function() {
+            this.newQuestions.push({
+                questionText: "",
+                possibleChoices: [
+                    {answerText: "", isCorrect: true}
+                ]
+            });
+        },
+        addAnswer: function(index) {
+            this.newQuestions[index].possibleChoices.push({answerText: "", isCorrect: false});
         }
     },
     created : function() {
         this.loggedIn();
+        this.getQuizzes();
     }
 }).mount("#app");
