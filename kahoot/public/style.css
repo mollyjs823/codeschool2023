@@ -4,11 +4,8 @@
     box-sizing: border-box;
 }
 :root {
-    --dk-blue: rgb(25, 25, 34);
-}
-
-[v-cloak] {
-    display: none;
+    --dk-blue: rgb(25, 23, 34);
+    --green: rgb(178, 239, 178);
 }
 
 #app, body {
@@ -16,9 +13,47 @@
     min-height: 100vh;
     background-color: var(--dk-blue);
     color: white;
-    font-family: 'Trebuchet MS', 'sans-serif';
+    font-family: 'Trebuchet MS', sans-serif;
+}
+[v-cloak] {
+    display: none;
 }
 
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(34, 34, 62);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    z-index: 999;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--green);
+    color: rgb(20, 20, 39);
+    padding: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.btn:hover {
+    opacity: 0.85;
+}
+
+.page {
+    width: 100%;
+    padding: 24px;
+}
 
 form {
     margin: 24px 0;
@@ -30,7 +65,26 @@ form {
     gap: 24px;
 }
 form label {
-    width: 90%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 4fr;
+}
+
+
+.card {
+    margin: 12px;
+    padding: 12px;
+    width: 200px;
+    height: 200px;
+    color: var(--dk-blue);
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.green-check {
+    color: var(--green);
 }
