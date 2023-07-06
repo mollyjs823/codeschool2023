@@ -23,7 +23,9 @@ Vue.createApp({
                         {answerText: "", isCorrect: true}
                     ]
                 }
-            ]
+            ],
+
+            quizShown: -1
         }
     },
     methods : {
@@ -150,6 +152,28 @@ Vue.createApp({
             .then(data => {
                 console.log(data);
             });
+        },
+
+        getRandomGradient: function() {
+            var color1 = this.generateColor();
+            var color2 = this.generateColor();
+            var angle = Math.floor(Math.random() * 361);
+            const gradient = `linear-gradient(${angle}deg, ${color1}, ${color2})`;
+            return gradient;
+        },
+        generateColor: function() {
+            // letters: 0123456789abcdef
+            const letters = "ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 6)];
+            }
+            return color;
+        },
+
+        displayQuiz: function(index) {
+            this.quizShown = index;
+            this.page = "displayQuiz";
         }
     },
     created : function() {

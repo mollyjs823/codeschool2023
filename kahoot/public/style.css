@@ -19,7 +19,10 @@
     display: none;
 }
 
-
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
 header {
     position: sticky;
     top: 0;
@@ -74,10 +77,12 @@ form label {
 .card {
     margin: 12px;
     padding: 12px;
+    
     width: 200px;
     height: 200px;
     color: var(--dk-blue);
     background-size: cover;
+
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
